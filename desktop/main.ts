@@ -35,6 +35,8 @@ process.env.GOOGLE_API_KEY = CONFIG.GCP_GEOLOCATION_API_KEY;
 process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = CONFIG.ELECTRON_DISABLE_SECURITY_WARNINGS;
 
 app.setName('New Expensify');
+app.commandLine.appendSwitch("disable-gpu");
+app.commandLine.appendSwitch("disable-software-rasterizer");
 
 /**
  * Electron main process that handles wrapping the web application.
